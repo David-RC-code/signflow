@@ -1,0 +1,25 @@
+<header>
+  <h1>{{ title() }}</h1>
+</header>
+
+<nav>
+  <!-- Liens de navigation -->
+</nav>
+
+<main>
+  <input type="text" #newTitle (input)="changeTitle(newTitle.value)" />
+  <div>
+    @if (inputValid()) {
+      "Titre valide"
+    } @else if (inputEmpty()) {
+      "Titre vide"
+    } @else {
+      "Titre invalide"
+    }
+  </div>
+  
+  <router-outlet />
+</main>
+<footer>
+  <p>Mentions légales</p>
+</footer>
