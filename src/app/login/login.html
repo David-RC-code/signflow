@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" (ngSubmit)="validForm()">
+        <label for="mail">Adresse mail : </label>
+        <input id="mail" type="email" formControlName="mail" />
+        <label for="password">Mot de passe : </label>
+        <input id="password" type="password" formControlName="password" />
+    <button type="submit" [disabled]="loginForm.invalid">Connecter</button>
+</form>
+
+@if (loginForm.controls.mail.invalid && loginForm.controls.mail.touched) {
+    <p>L'adresse e-mail est invalide</p>
+}
+
+@if (loginForm.controls.password.invalid && loginForm.controls.password.touched) {
+    <p>Mot de passe obligatoire</p>
+}
+
+

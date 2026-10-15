@@ -1,0 +1,13 @@
+<p>homepage works!</p>
+<div>
+    <input type="text" [value]="titleService.title()" #newTitle (input)="titleService.changeTitle(newTitle.value)" />
+  <div>
+    @if (inputValid()) {
+      Titre valide
+    } @else if (inputEmpty()) {
+      Titre vide
+    } @else {
+      Titre invalide
+    }
+  </div>
+</div>

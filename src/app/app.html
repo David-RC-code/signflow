@@ -3,21 +3,11 @@
 </header>
 
 <nav>
-  <!-- Liens de navigation -->
+  <a routerLinkActive="active-link" routerLink="home">Accueil</a>
+  <a routerLinkActive="active-link" routerLink="contracts">Contrats</a>
 </nav>
 
 <main>
-  <input type="text" #newTitle (input)="changeTitle(newTitle.value)" />
-  <div>
-    @if (inputValid()) {
-      "Titre valide"
-    } @else if (inputEmpty()) {
-      "Titre vide"
-    } @else {
-      "Titre invalide"
-    }
-  </div>
-  
   <router-outlet />
 </main>
 <footer>

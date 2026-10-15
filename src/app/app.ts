@@ -1,25 +1,15 @@
-import { Component, computed, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
+import { Title } from './title';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('SignFlow');
+  private titleService = inject(Title);
 
-  protected changeTitle(newTitle: string) {
-    this.title.set(newTitle);
-  }
-
-  protected inputValid = computed(() => {
-    return this.title().length >= 4;
-  });
-
-  protected inputEmpty = computed(() => {
-    return this.title().length === 0;
-  });
-
+  protected readonly title = this.titleService.title
 }
