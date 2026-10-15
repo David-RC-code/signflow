@@ -26,10 +26,23 @@ Ouvrir dans le navigateur : [localhost:4200](http://localhost:4200)
 
 ## Statut
 
-Aucune fonctionnalité de signature ou d'authentification n'est disponible pour l'instant.
+L'application est en cours de développement
 
-L'application affiche un champ de saisie qui modifie le titre et un message de validation.
+### Elle affiche :
+
+- Un champ de saisie permettant de modifier le titre dynamiquement.
+- Une page d'authentification avec validation des entrées utilisateur côté client.
 
 ## Contexte
 
 Après une absence de 4 ans sur le marché du web, j'ai décidé de me remettre à niveau dans mes outils de prédilection : Angular et Node.js. Pour cela, j'ai choisi de prendre un mentor : Claude, avec qui nous avons établi une sorte de contrat de collaboration. Il ne doit pas me donner le code à taper avant ma tentative ; il me fournit une solution complète seulement à ma demande ou avec mon accord ; il doit me challenger et m'orienter. Il fait des revues de code et me donne des axes d'amélioration.
+
+# Screenshots
+
+## Page d'accueil
+
+![Page d'accueil de SignFlow](screenshots/homepage.png)
+
+## Page d'authentification
+
+![Page d'accueil de SignFlow](screenshots/authentication_page.png)
