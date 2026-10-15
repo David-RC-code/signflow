@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "ng-tutorial": {
+    "signflow": {
       "projectType": "application",
       "schematics": {},
       "root": "",

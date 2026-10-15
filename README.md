@@ -1,59 +1,35 @@
-# NgTutorial
+# Signflow
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.6.
+Projet d'apprentissage Angular : signals, computed, templates et routage, en route vers une appli de signature électronique.
 
-## Development server
+## Prérequis
 
-To start a local development server, run:
+- Node.js 22 (avec npm)
 
-```bash
-ng serve
-```
+## Installation
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Dans un terminal :
 
 ```bash
-ng generate component component-name
+git clone https://github.com/David-RC-code/signflow
+cd signflow
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Une fois les packages installés, lancer l'application :
 
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+Ouvrir dans le navigateur : [localhost:4200](http://localhost:4200)
 
-To build the project run:
+## Statut
 
-```bash
-ng build
-```
+Aucune fonctionnalité de signature ou d'authentification n'est disponible pour l'instant.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+L'application affiche un champ de saisie qui modifie le titre et un message de validation.
 
-## Running unit tests
+## Contexte
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Après une absence de 4 ans sur le marché du web, j'ai décidé de me remettre à niveau dans mes outils de prédilection : Angular et Node.js. Pour cela, j'ai choisi de prendre un mentor : Claude, avec qui nous avons établi une sorte de contrat de collaboration. Il ne doit pas me donner le code à taper avant ma tentative ; il me fournit une solution complète seulement à ma demande ou avec mon accord ; il doit me challenger et m'orienter. Il fait des revues de code et me donne des axes d'amélioration.
