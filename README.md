@@ -41,8 +41,8 @@ Après une absence de 4 ans sur le marché du web, j'ai décidé de me remettre 
 
 ## Page d'accueil
 
-![Page d'accueil de SignFlow](screenshots/homepage.png)
+![Page d'accueil de SignFlow](screenshots/homepage.PNG)
 
 ## Page d'authentification
 
-![Page d'accueil de SignFlow](screenshots/authentication_page.png)
+![Page d'accueil de SignFlow](screenshots/authentication_page.PNG)
