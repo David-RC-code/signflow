@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Card } from '../../shared/card/card';
 
 @Component({
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, Card],
   selector: 'app-login',
   styleUrl: './login.css',
   templateUrl: './login.html',

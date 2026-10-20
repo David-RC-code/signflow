@@ -1,5 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  background-color: cornflowerblue;
-}
 @import 'tailwindcss';
+
+@theme {
+  --color-global-background: #F5FFFA;
+  --color-border: #50A2A7;
+  --color-background: #9888A5;
+  --color-text: #2B2D42;
+  --color-danger: #DC493A;
+}
+
+body {
+  background-color: var(--color-global-background);
+  color: var(--color-border)
+}
