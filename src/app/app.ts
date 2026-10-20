@@ -1,6 +1,6 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
-import { Title } from './title';
+import { Title } from './services/title';
 
 @Component({
   imports: [RouterOutlet, RouterLink, RouterLinkActive],

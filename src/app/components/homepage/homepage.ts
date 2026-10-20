@@ -1,5 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
-import { Title } from '../title';
+import { Title } from '../../services/title';
 
 @Component({
   imports: [],
