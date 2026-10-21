@@ -20,6 +20,7 @@ export class Login {
   })
 
   protected validForm = () => {
+    /* Cette fonction gérera l'appel au service d'authentification et la gestion des erreurs. */
     if (this.loginForm.invalid) {
       console.log('...Le formulaire est invalide...')
       return

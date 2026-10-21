@@ -1,0 +1,26 @@
+<div class="flex min-h-screen items-center justify-center p-">
+    <app-card title="{{title()}}" footerRoute="{{footerRoute()}}" footerText="{{footerText()}}">
+        <form class="form flex w-full flex-col gap-3" [formGroup]="registerForm" (ngSubmit)="validForm()">
+            <label class="label" for="mail">Adresse mail : </label>
+            <input class="input" id="mail" type="email" formControlName="mail" />
+            <label class="label" for="password">Mot de passe : </label>
+            <input class="input" id="password" type="password" formControlName="password" />
+            <p class="mt-1 text-xs" 
+                [ngClass]="{
+                        'text-red-500': ((registerForm.controls.password.hasError('minlength') || registerForm.controls.password.hasError('pattern') ) && registerForm.controls.password.touched), 
+                        'text-green-500': (!registerForm.controls.password.invalid && registerForm.controls.password.touched), 
+                        'text-gray-500': !registerForm.controls.password.touched}">8 caractères minimum, dont au moins un caractère spécial.</p>
+            <label class="label" for="password">Confirmer mot de passe : </label>
+            <input class="input" id="confirmPassword" type="password" formControlName="confirmPassword" />
+            <button class="btn-primary" type="submit" [disabled]="registerForm.invalid">S'inscrire</button>
+        </form>
+        @if (registerForm.controls.mail.invalid && registerForm.controls.mail.touched) {
+            <p class="warning">L'adresse e-mail est invalide</p>
+        }
+
+        @if (registerForm.controls.confirmPassword.touched && registerForm.hasError('passwordMisMatch')) {
+            <p class="warning">Les mots de passe ne correspondent pas.</p>
+        }
+    </app-card>
+
+</div>

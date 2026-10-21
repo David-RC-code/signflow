@@ -19,8 +19,8 @@ export class App {
 
   protected isDisplay = toSignal(this.router.events.pipe(
     filter(event => event instanceof NavigationEnd),
-    map(() => this.router.url !== '/login')
-  ),{initialValue: this.router.url !== '/login'});
+    map(() => !['/login', '/register'].includes(this.router.url)),
+  ),{initialValue: !['/login', '/register'].includes(this.router.url)});
 
 
 }
