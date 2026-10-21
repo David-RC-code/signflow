@@ -1,11 +1,11 @@
-<div class="item-center justify-center">
-    <app-card>
-        <form class="form flex flex-col" [formGroup]="loginForm" (ngSubmit)="validForm()">
-        <label for="mail">Adresse mail : </label>
-        <input id="mail" type="email" formControlName="mail" />
-        <label for="password">Mot de passe : </label>
-        <input id="password" type="password" formControlName="password" />
-        <button type="submit" [disabled]="loginForm.invalid">Connecter</button>
+<div class="flex min-h-screen items-center justify-center p-">
+    <app-card title="{{title()}}" footerRoute="{{footerRoute()}}" footerText="{{footerText()}}" >
+        <form class="form flex w-full flex-col gap-3" [formGroup]="loginForm" (ngSubmit)="validForm()">
+        <label class="label" for="mail">Adresse mail : </label>
+        <input class="input" id="mail" type="email" formControlName="mail" />
+        <label class="label" for="password">Mot de passe : </label>
+        <input class="input" id="password" type="password" formControlName="password" />
+        <button class="btn-primary" type="submit" [disabled]="loginForm.invalid">Connecter</button>
     </form>
 
     @if (loginForm.controls.mail.invalid && loginForm.controls.mail.touched) {
