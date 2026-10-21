@@ -1,17 +1,19 @@
-<form [formGroup]="loginForm" (ngSubmit)="validForm()">
-        <label for="mail">Adresse mail : </label>
-        <input id="mail" type="email" formControlName="mail" />
-        <label for="password">Mot de passe : </label>
-        <input id="password" type="password" formControlName="password" />
-    <button type="submit" [disabled]="loginForm.invalid">Connecter</button>
-</form>
+<div class="flex min-h-screen items-center justify-center p-">
+    <app-card title="{{title()}}" footerRoute="{{footerRoute()}}" footerText="{{footerText()}}" >
+        <form class="form flex w-full flex-col gap-3" [formGroup]="loginForm" (ngSubmit)="validForm()">
+        <label class="label" for="mail">Adresse mail : </label>
+        <input class="input" id="mail" type="email" formControlName="mail" />
+        <label class="label" for="password">Mot de passe : </label>
+        <input class="input" id="password" type="password" formControlName="password" />
+        <button class="btn-primary" type="submit" [disabled]="loginForm.invalid">Connecter</button>
+    </form>
 
-@if (loginForm.controls.mail.invalid && loginForm.controls.mail.touched) {
-    <p>L'adresse e-mail est invalide</p>
-}
+    @if (loginForm.controls.mail.invalid && loginForm.controls.mail.touched) {
+        <p class="warning">L'adresse e-mail est invalide</p>
+    }
 
-@if (loginForm.controls.password.invalid && loginForm.controls.password.touched) {
-    <p>Mot de passe obligatoire</p>
-}
-
-
+    @if (loginForm.controls.password.invalid && loginForm.controls.password.touched) {
+        <p class="warning">Mot de passe obligatoire</p>
+    }
+    </app-card>
+</div>

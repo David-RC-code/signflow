@@ -2,10 +2,13 @@
   <h1>{{ title() }}</h1>
 </header>
 
-<nav>
+@if (isDisplay()) {
+  <nav>
   <a routerLinkActive="active-link" routerLink="home">Accueil</a>
   <a routerLinkActive="active-link" routerLink="contracts">Contrats</a>
 </nav>
+}
+
 
 <main>
   <router-outlet />
